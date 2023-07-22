@@ -46,7 +46,7 @@ export const Container = (props) => {
         <div className='sub-container-1'>
           <div className='inner-container-1'>
             <IconButton>
-              <input type='date' id='date' onchagne={timehandler}></input>
+              <input type='date' id='date' onChange={timehandler}></input>
               <CalendarMonthIcon style={{ color: 'rgb(90, 90, 90)' }}></CalendarMonthIcon>
             </IconButton>
 
