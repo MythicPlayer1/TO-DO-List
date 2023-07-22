@@ -1,0 +1,118 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    padding-left: 25px;
+    padding-right: 25px;
+    height: 120px;
+    
+}
+
+.input-txt {
+    height: 50px;
+    background-color: white;
+    border: none;
+    border-bottom: 2px solid rgba(115, 114, 114, 0.2);
+    text-transform: capitalize;
+    width:99.4%;
+    padding-left: 10px;
+    
+
+}
+
+.sub-container-1 {
+    display: flex;
+    justify-content: space-between;
+    height: 50px;
+    align-items: center;
+    width: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 2px 5px 0px rgba(72, 72, 72, 0.1);
+
+
+}
+
+.inner-container-1 {
+    display: flex;
+    width: 100px;
+    justify-content: space-evenly;
+}
+
+.Button {
+    margin-right: 15px;
+    height: 35px;
+    width: 50px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background: white;
+
+}
+
+/* Lists CSS..................................................... */
+.top-main{
+    width: 99%;
+    margin-bottom: 5px;
+}
+
+
+.list-input {
+
+    height: 50px;
+    margin-right: 25px;
+    margin-left: 25px;
+    padding-left: 15px;
+    background-color: rgb(255, 255, 255);
+    border: none;
+    width: 96.5%;
+    border-bottom: 2px solid rgba(115, 114, 114, 0.2);
+    display: flex;
+    align-items: center;
+    font-family: monospace;
+    justify-content: space-between;
+   
+}
+.innerlist-input{
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    display:flex;
+}
+.round-btn1{
+    height:20px;
+    width: 15px;
+    border: none;
+    /* border: 1px solid rgba(0, 0, 0, 0.1); */
+    border-radius: 50%;
+    
+    margin-right: 10px;
+}
+
+/* .round-btn:focus{
+    background-color: rgb(57, 102, 253);
+} */
+
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+    background: transparent;
+    bottom: 0;
+    color: transparent;
+    cursor: pointer;
+    height: auto;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: auto;
+}
+
+input[type=date]{
+    
+    color: transparent;
+    border: none;
+    width: 10px;
+    position: absolute;
+    background: transparent;
+    
+  
+}
+
+
+
