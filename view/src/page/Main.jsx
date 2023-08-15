@@ -10,7 +10,7 @@ import { useEffect, useState } from 'react';
 const Main = () => {
     const [datas, setNewDatas] = useState("");
     const [dbdatas, setDbdatas] = useState([]);
-    
+     
     //for date
     const current = new Date();
     const date = `${current.getDate()}/${current.getMonth()+1}/${current.getFullYear()}`;
@@ -49,12 +49,14 @@ const Main = () => {
                         </div>
                     </div>
                     <Container senddata={savedata}
-                        apifetch={getApi}></Container>
+                        apifetch={getApi}
+                       ></Container>
                     <div className='sub-container4'>
                         {/* <Lists item={dbdatas}></Lists> */}
                         {
-                            dbdatas.map((item) => (
+                            dbdatas.map((item, index) => (
                                 <Lists
+                                    key={index}
                                     item={item}
                                     apifetch={getApi}
                                 ></Lists>

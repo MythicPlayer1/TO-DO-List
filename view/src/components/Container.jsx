@@ -9,12 +9,15 @@ import './Container.css'
 
 export const Container = (props) => {
   const [NewText, setNewText] = useState();
+
+  const [date, setDate]=useState();
+
   const textchangeHandler = (event) => {
     setNewText(event.target.value);
   }
   const timehandler=(event)=>{
-    setNewText(event.target.value)
-
+    
+    setDate(event.target.value)    
   }
 
   const submithandler = async (event) => {
@@ -28,12 +31,15 @@ export const Container = (props) => {
         "Content-Type": 'application/json'
       },
       body: JSON.stringify({
-        NewText
+        NewText:NewText,
+        Date:date
       })
 
     })
+   
     props.apifetch();
     const data = await response.json()
+    console.log({date, NewText})
 
     setNewText(" ")
 
@@ -46,11 +52,11 @@ export const Container = (props) => {
         <div className='sub-container-1'>
           <div className='inner-container-1'>
             <IconButton>
-              <input type='date' id='date' onChange={timehandler}></input>
-              <CalendarMonthIcon style={{ color: 'rgb(90, 90, 90)' }}></CalendarMonthIcon>
+              <input type='date' id='date' onChange={timehandler} ></input>
+              <CalendarMonthIcon style={{ color: 'rgb(90, 90, 90)' }} ></CalendarMonthIcon>
             </IconButton>
-
-            <EditNotificationsOutlinedIcon style={{ color: 'rgb(90, 90, 90)' }}></EditNotificationsOutlinedIcon>
+              
+            {/* <EditNotificationsOutlinedIcon style={{ color: 'rgb(90, 90, 90)' }}></EditNotificationsOutlinedIcon> */}
           </div>
           <button className='Button' >Add</button>
         </div></form>
