@@ -2,7 +2,8 @@ const mongoose= require('mongoose')
 
 const schemas=mongoose.Schema(
     {
-        NewText:String
+        NewText:String,
+        Date:Date
     }
 )
 
